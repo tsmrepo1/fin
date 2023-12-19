@@ -1,0 +1,29 @@
+<form action="https://secure.paypal.com/uk/cgi-bin/webscr" method="post" name="paypal" id="paypal">
+    <!-- Prepopulate the PayPal checkout page with customer details, -->
+    <input type="hidden" name="first_name" value="Raktim">
+    <input type="hidden" name="last_name" value="Banerjee">
+    <input type="hidden" name="email" value="raktimbanerjee9@gmail.com">
+    <input type="hidden" name="address1" value="29E/1 Rammohan">
+    <input type="hidden" name="address2" value="">
+    <input type="hidden" name="city" value="Howrah">
+    <input type="hidden" name="zip" value="711102">
+    <input type="hidden" name="day_phone_a" value="">
+    <input type="hidden" name="day_phone_b" value="919836739907">
+
+    <!-- We don't need to use _ext-enter anymore to prepopulate pages -->
+    <!-- cmd = _xclick will automatically pre populate pages -->
+    <!-- More information: https://www.x.com/docs/DOC-1332 -->
+    <input type="hidden" name="cmd" value="_xclick" />
+    <input type="hidden" name="business" value="paypal@email.com" />
+    <input type="hidden" name="cbt" value="Return to Your Business Name" />
+    <input type="hidden" name="currency_code" value="GBP" />
+
+    <!-- Allow the customer to enter the desired quantity -->
+    <input type="hidden" name="quantity" value="1" />
+    <input type="hidden" name="item_name" value="Name of Item" />
+
+    <!-- Custom value you want to send and process back in the IPN -->
+    <input type="hidden" name="amount" value="100" />
+    <input type="submit" />
+</form>
+
